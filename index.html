@@ -1,58 +1,93 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Cookbook 3.0</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookbook 3.0 Registration</title>
+  <link rel="icon" type="image/png" href="./logo.png">
+  <link rel="stylesheet" href="./styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<div id="stars"></div>
+  <!-- Background Layer -->
+  <div id="stars"></div>
 
-<div class="black-hole-container">
-  <div class="accretion-disk"></div>
-  <div class="photon-ring"></div>
-  <div class="event-horizon"></div>
-</div>
+  <!-- Black Hole Layer (Background) -->
+  <div class="black-hole-container">
+    <div class="accretion-disk"></div>
+    <div class="photon-ring"></div>
+    <div class="event-horizon"></div>
+  </div>
 
-<div class="form-container">
-  <h1>COOKBOOK 3.0</h1>
-  <p class="subtitle"><b>CodeChef WCE Chapter</b></p>
+  <!-- Form Layer -->
+  <div class="form-container">
+    <!-- Logo moved inside container for better mobile layout -->
+    <a href="https://codechef-wce-chapter.org">
+      <img src="logo.png" alt="Cookbook Logo" class="form-logo" onerror="this.style.display='none'">
+    </a>
+    
+    <h1>COOKBOOK 3.0</h1>
+    <p class="subtitle"><b>CodeChef WCE Chapter</b></p>
 
-  
     <form
       id="regForm"
-      method="POST"
-      target="hidden_iframe"
-      action="https://script.google.com/macros/s/AKfycbzwX1adKzkOzbAE8Ju11uFQADc4QKSgRy9c1HrfJmpUouaCvKaAUVJ2mvkFTY-z-wyY/exec">
-    <div class="input-group"><label>Name</label><input name="name" required></div>
-    <div class="input-group"><label>Email</label><input type="email" name="email" required></div>
-    <div class="input-group"><label>Phone</label><input name="phone" required></div>
-    <div class="input-group">
-      <label>Branch</label>
-      <select name="branch" required>
-        <option disabled selected>Select Branch</option>
-        <option>CSE</option><option>IT</option><option>AI-ML</option>
-        <option>ENTC</option><option>MECH</option>
-        <option>CIVIL</option><option>ELEC</option>
-      </select>
-    </div>
-    <div class="input-group">
-      <label>Year</label>
-      <select name="year" required>
-        <option disabled selected>Select Year</option>
-        <option>FY</option><option>SY</option><option>TY</option><option>LY</option>
-      </select>
-    </div>
-    <button type="submit">REGISTER</button>
-  </form>
+      action="https://script.google.com/macros/s/AKfycbzwX1adKzkOzbAE8Ju11uFQADc4QKSgRy9c1HrfJmpUouaCvKaAUVJ2mvkFTY-z-wyY/exec"
+      method="POST">
+      
+      <div class="input-group">
+        <label>FULL NAME</label>
+        <input name="name" type="text" placeholder="ex. John Doe" required autocomplete="off">
+      </div>
+      
+      <div class="input-group">
+        <label>EMAIL ADDRESS</label>
+        <input type="email" name="email" placeholder="ex. john@college.edu" required autocomplete="off">
+      </div>
+      
+      <div class="input-group">
+        <label>PHONE NUMBER</label>
+        <input type="tel" name="phone" placeholder="ex. 9876543210" required autocomplete="off">
+      </div>
+      
+      <div class="input-group">
+        <label>BRANCH</label>
+        <select name="branch" required>
+          <option value="" disabled selected>Select your branch</option>
+          <option value="CSE">CSE</option>
+          <option value="IT">IT</option>
+          <option value="AI-ML">AI-ML</option>
+          <option value="ENTC">ENTC</option>
+          <option value="MECH">MECH</option>
+          <option value="CIVIL">CIVIL</option>
+          <option value="ELEC">ELEC</option>
+        </select>
+      </div>
+      
+      <div class="input-group">
+        <label>YEAR</label>
+        <select name="year" required>
+          <option value="" disabled selected>Select your year</option>
+          <option value="FY">First Year (FY)</option>
+          <option value="SY">Second Year (SY)</option>
+          <option value="TY">Third Year (TY)</option>
+          <option value="LY">Final Year (LY)</option>
+        </select>
+      </div>
+      
+      <button type="submit">REGISTER NOW</button>
+    </form>
+  </div>
 
-  <div id="popupMessage"></div>
-</div>
+  <!-- Footer -->
+  <div class="footer">
+    &copy; 2026 CodeChef WCE Chapter. All rights reserved.
+  </div>
 
-<script src="script.js"></script>
+  <!-- Popup Notification -->
+  <div id="popupMessage">Registration Successful!</div>
+
+  <script src="./script.js"></script>
 </body>
 </html>
