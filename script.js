@@ -31,7 +31,8 @@
     }
     animateStars();
 
-    // --- Form Submission Logic ---
+    /* 
+    // --- Form Submission Logic (Disabled) ---
     const form = document.getElementById("regForm");
     const popup = document.getElementById("popupMessage");
     const btn = form.querySelector("button");
@@ -77,4 +78,5 @@
         btn.disabled = false;
       });
     });
+    */
  
